@@ -1,0 +1,40 @@
+Hi Chibueze,
+
+We are looking for candidates who would regularly attend  our offices in Prague, Czechia. 
+
+Before we proceed with an in person interview, we would like to test your skills on the following assignment. Please contact me in case you have any questions.
+
+If you would like to discuss anything related to the open position or Datamole before you get into the assignment, we can schedule a quick video meeting. Please let me know.
+
+---
+
+The aim of this assignment is to monitor activities happening on GitHub.
+For that we want you to stream specific events from the Github API (
+https://api.github.com/events). The events we are interest in are the
+WatchEvent, PullRequestEvent and IssuesEvent.
+
+Based on the collected events, metrics shall be provided at any time via a
+REST API to the end user. The following metrics should be implemented:
+
+ - Calculate the average time between pull requests for a given repository.
+
+ - Return the total number of events grouped by the event type for a given
+   offset. The offset determines how much time we want to look back i.e., an
+   offset of 10 means we count only the events which have been created in the
+   last 10 minutes.
+
+Bonus assignment
+
+ - Add another REST API endpoint providing a meaningful visualization of one of
+   existing metrics or a newly introduced metric.
+
+Please add a README file to your solution that contains how to run the solution
+and a brief description about your assumptions. To get an idea of your
+documentation skills, we ask you to create a simple diagram of your application
+preferably regarding the C4 (level 1) model rules (https://c4model.com/). The
+assignment will have to be made in Python. We expect it will take 8 hours to do
+it properly.
+
+Best wishes,
+Martin Indra
+

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+ <head>
+   <meta charset="utf-8">
+ </head>
+ <body>
+ 
+   <div>
+     <canvas id="myChart" width="900" height="400"></canvas>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js" integrity="sha512-JPcRR8yFa8mmCsfrw4TNte1ZvF1e3+1SdGMslZvmrzDYxS69J7J49vkFL8u6u8PlPJK+H3voElBtUCzaXj+6ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    const labels = {{ labels | tojson}};
+ 
+ const data = {
+     labels: labels,
+     datasets: [{
+         label: 'Github Event Type by Activities',
+         backgroundColor: ['rgb(255, 99, 132)','rgb(188, 180, 172)','rgb(88, 156, 180)'],
+         borderColor:'rgb(21, 115, 148)',
+         data: {{ data | tojson}},
+     }]
+ };
+
+ const config = {
+     type: 'bar',
+     data: data,
+     options: { maintainAspectRatio: false },
+     plugins:[ChartDataLabels]
+ };
+  
+ const myChart = new Chart(
+     document.getElementById('myChart'),
+     config
+ );
+
+  
+</script>
+ </body>
+</html> 
